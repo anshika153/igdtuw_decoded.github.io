@@ -1,0 +1,173 @@
+body {
+  background-color: #0d0d0d;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #ffcc00;
+  color: black;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* keep above content */
+}
+
+.back-button:hover {
+  background-color: #ffaa00;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-family: cursive;
+  color: antiquewhite;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 15px;
+}
+
+.info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #ffcc66;
+}
+
+.info p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.distance {
+  font-weight: bold;
+  color: #ff9966;
+}
+
+.map-link {
+  text-decoration: none;
+  color: #66ccff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.map-link:hover {
+  color: #ffffff;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 204, 102, 0.6);
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+---------------------------- */
+
+/* Tablets (≤ 992px) → 2 columns */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobiles (≤ 768px) → single column */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  
+  .back-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  .info h2 {
+    font-size: 1.1rem;
+  }
+
+  .info p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Phones (≤ 480px) → tighter spacing */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .info h2 {
+    font-size: 1rem;
+  }
+
+  .info p {
+    font-size: 0.8rem;
+  }
+}

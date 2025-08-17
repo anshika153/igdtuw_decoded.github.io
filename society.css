@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  color: #F5F5F5;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  padding: 0;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #ffcc00;
+  color: black;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.back-button:hover {
+  background-color: #e6b800;
+}
+
+.spectrum-line {
+  font-family: cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 30px 0;
+  letter-spacing: 1px;
+}
+
+.spectrum-line span {
+  display: inline-block;
+  padding: 0 6px;
+  animation: colorCycle 6s linear infinite;
+}
+
+.spectrum-line span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.spectrum-line span:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.spectrum-line span:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+.spectrum-line span:nth-child(4) {
+  animation-delay: 2.4s;
+}
+
+.spectrum-line span:nth-child(5) {
+  animation-delay: 3.2s;
+}
+
+.spectrum-line span:nth-child(6) {
+  animation-delay: 4.0s;
+}
+
+@keyframes colorCycle {
+  0% {
+    color: #ffd39b;
+  }
+
+  16% {
+    color: #7ae7c7;
+  }
+
+  33% {
+    color: #ff8bdc;
+  }
+
+  50% {
+    color: #9f7cf5;
+  }
+
+  66% {
+    color: #6dd3ff;
+  }
+
+  83% {
+    color: #ffe36b;
+  }
+
+  100% {
+    color: #ffd39b;
+  }
+}
+
+.circle-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+
+.circle {
+  width: 160px;
+  height: 160px;
+  background-color: black;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.circle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgb(0, 225, 255);
+}
+
+.circle-label {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ----------------------
+   Responsive Design
+----------------------- */
+
+/* Tablets (≤ 992px): 2 circles per row */
+@media (max-width: 992px) {
+  .circle-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+    padding: 0 20px;
+  }
+
+  .circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .spectrum-line {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .circle-container {
+    grid-template-columns: repeat(2, 1fr);   /* Two circles per row */
+    gap: 28px;
+    padding: 0 10px;
+    justify-items: center;
+  }
+
+  .circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .spectrum-line {
+    font-size: 1.25rem;
+    margin: 18px 0;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    top: 12px;
+    left: 12px;
+  }
+}
+
+
+/* Small Phones (≤ 480px) */
+@media (max-width: 480px) {
+  .circle-container {
+    gap: 18px;
+    padding: 0 2px;
+  }
+
+  .circle {
+    width: 85px;
+    height: 85px;
+  }
+
+  .circle-label {
+    font-size: 0.92rem;
+    margin-top: 6px;
+  }
+
+  .back-button {
+    font-size: 0.8rem;
+    padding: 5px 9px;
+    top: 6px;
+    left: 6px;
+  }
+}

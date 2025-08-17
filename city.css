@@ -1,0 +1,141 @@
+body {
+    background-color: #000; /* Dark theme */
+    color: white;
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #ffcc00;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e6b800;
+}
+
+.spectrum-line { 
+  font-family:cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 30px 0;
+  letter-spacing: 1px;
+}
+
+.spectrum-line span {
+  display: inline-block;
+  padding: 0 6px;
+  animation: colorCycle 6s linear infinite;
+}
+
+
+.spectrum-line span:nth-child(1){ animation-delay: 0s; }
+.spectrum-line span:nth-child(2){ animation-delay: 0.8s; }
+.spectrum-line span:nth-child(3){ animation-delay: 1.6s; }
+.spectrum-line span:nth-child(4){ animation-delay: 2.4s; }
+.spectrum-line span:nth-child(5){ animation-delay: 3.2s; }
+.spectrum-line span:nth-child(6){ animation-delay: 4.0s; }
+
+@keyframes colorCycle {
+  0%   { color: #ffd39b; }  
+  50%  { color: #7cf57e; } 
+  100% { color: #ffd39b; } 
+}
+
+.circle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 30px;
+    justify-items: center;
+}
+
+.circle-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.circle-card:hover {
+    transform: scale(1.05);
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    background-color: #ccc; 
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+a,p{
+    text-decoration: none;
+    color : white;
+}
+.circle:hover {
+    box-shadow: 0 0 20px #ffcc00;
+    transform: scale(1.08);
+}
+
+.circle-card p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+
+/* Tablets (2 columns) */
+@media (max-width: 900px) {
+    .circle-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .circle {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+/* Mobile (1 column, bigger circles for touch) */
+@media (max-width: 600px) {
+    .circle-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .explore-section h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Small Mobile (fit smaller screens) */
+@media (max-width: 400px) {
+    .circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .circle-card p {
+        font-size: 0.9rem;
+    }
+}

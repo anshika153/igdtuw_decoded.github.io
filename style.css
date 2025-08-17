@@ -1,0 +1,930 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  color: #F5F5F5;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.hello {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.navbar-link {
+  color: #dbef007b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #33CFFF;
+}
+
+.intro-para {
+  color: #B0B0B0;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000000;
+  padding: 0 32px;
+  height: 70px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+.navbar-logo {
+  height: 46px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  gap: 38px;
+  list-style: none;
+}
+
+.navbar-links li a {
+  color: #F5F5F5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.13rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-links li a:hover {
+  background: #dbef007b;
+  color: #FFF;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  border-radius: 6px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #F5F5F5;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  background: #dbef007b;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Button / Right Side */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  background: #23272A;
+  color: #FFF;
+  border: none;
+  padding: 8px 18px;
+  font-size: 1.06rem;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 8px #00AEEF33;
+  font-weight: 500;
+}
+
+/* RESPONSIVE DESIGN (MEDIA QUERIES) */
+
+
+/* Tablets */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-links li a {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 20px;
+  }
+
+  .navbar-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Hide links in mobile, show menu button */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    background: #111111;
+    padding: 10px 0;
+    border-radius: 6px;
+    margin-top: 12px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    /* Toggle with JS */
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+
+  .navbar-right {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Add a hamburger menu button */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #F5F5F5;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .navbar-right {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .navbar-logo {
+    height: 40px;
+  }
+
+  .hello {
+    font-size: 1.2rem;
+  }
+
+  .intro-para {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* intro */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 8%;
+  background-color: #0a0a0a;
+  color: #e6e6e6;
+  flex-wrap: wrap;
+  /* so items wrap on smaller screens */
+}
+
+/* ----- Text Section ----- */
+.intro-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.intro-text h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.intro-text h1 span {
+  color: #ffcc70;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.highlight {
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+/* ----- Logo Section ----- */
+.intro-logo {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-img {
+  width: 270px;
+  max-width: 100%;
+  /* prevent overflow */
+  height: auto;
+}
+
+.tagline {
+  margin-top: 15px;
+  font-style: italic;
+  color: #bbb;
+}
+
+/* --------------------------- */
+/* RESPONSIVENESS */
+/* --------------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .intro {
+    padding: 50px 6%;
+  }
+
+  .intro-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .logo-img {
+    width: 220px;
+  }
+}
+
+/* Mobile (stacked layout) */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .intro-logo {
+    flex: none;
+    width: 100%;
+  }
+
+  .intro-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .intro-text p {
+    font-size: 0.95rem;
+  }
+
+  .logo-img {
+    width: 200px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .intro {
+    padding: 30px 20px;
+  }
+
+  .intro-text h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .intro-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .logo-img {
+    width: 160px;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+/* explore*/
+
+.grey-box {
+  background-color: rgba(128, 128, 128, 0.335);
+  height: auto;
+  /* remove fixed height for devices */
+  margin: 20px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  color: #FFD700;
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Grid Desktop Style */
+.explore-container {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 160px 160px;
+  gap: 80px 300px;
+  position: relative;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  z-index: 2;
+}
+
+.explore-box {
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 16px;
+  transition: background-color 0.9s ease, transform 0.3s ease;
+  overflow: visible;
+}
+
+.explore-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+.label {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 1px 3px #333a;
+}
+
+
+.explore-box:hover {
+  transform: scale(1.05);
+  opacity: 0.55;
+}
+
+
+/* RESPONSIVENESS */
+
+
+/* Default (Desktop/Tablet) — keep logo */
+.explore-container {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 160px 160px;
+  gap: 80px 300px;
+  position: relative;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  z-index: 2;
+}
+
+/* Mobile Layout (≤768px) — stack cards & hide logo */
+@media (max-width: 768px) {
+  .explore-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 25px;
+    position: static;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+/* Small Phones (≤480px) — tighter spacing */
+@media (max-width: 480px) {
+  .explore-container {
+    gap: 15px;
+  }
+}
+
+
+/* about us */
+
+/* ====== About Section ====== */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 20px 8%;
+  background-color: #0a0a0a;
+  color: #e6e6e6;
+  flex-wrap: wrap; /* allow wrapping for smaller screens */
+}
+
+.about-text {
+  flex: 1;
+  max-width: 650px;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffcc70;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-text .highlight {
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+.about-text .highlight1 {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.about-text ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.about-text ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Logo / Right Side */
+.about-logo {
+  flex: 0 0 35%;
+  text-align: center;
+}
+
+.about-logo img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.about-logo p {
+  margin-top: 12px;
+  font-style: italic;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* --------------------------- */
+/* RESPONSIVE DESIGN */
+/* --------------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .about-section {
+    gap: 40px;
+    padding: 50px 6%;
+  }
+
+  .about-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-logo img {
+    width: 200px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-logo {
+    flex: none;
+    margin-top: 30px;
+  }
+
+  .about-logo img {
+    width: 180px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 30px 20px;
+  }
+
+  .about-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .about-logo img {
+    width: 150px;
+  }
+
+  .about-logo p {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* exam */
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(145deg, #0d0d0d, #111111);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero h1 span {
+  color: #FFD700;
+}
+
+.exam-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+
+.exam-card {
+  background: #141414;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  padding: 25px;
+  width: 260px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.exam-card:hover {
+  background: linear-gradient(#141414, #141414) padding-box,
+    linear-gradient(45deg, #FFD700, #FF8C00, #FFD700) border-box;
+  border: 3px solid transparent;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.25);
+}
+
+.exam-img-container {
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.15), transparent);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.exam-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exam-card img:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+.exam-card h2 {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.exam-card h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #FFD700;
+  transition: width 0.3s ease;
+  margin: 5px auto 0;
+}
+
+.exam-card:hover h2::after {
+  width: 60%;
+}
+
+.exam-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+
+/* footer */
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #111;
+  padding: 20px 120px 20px 50px;
+  border-radius: 8px;
+}
+
+/* Left Side */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 450px;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.footer-left .logo-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-left img {
+  width: 30px;
+  margin-right: 12px;
+}
+
+.footer-left h2 {
+  color: rgb(255, 136, 0);
+  font-size: 22px;
+  margin: 0;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #cecdcd;
+  line-height: 1.6;
+}
+
+/* Right Side */
+.footer-right {
+  max-width: 300px;
+  flex: 1;
+}
+
+.footer-right h2 {
+  color: rgb(255, 136, 0);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-contact {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.footer-contact i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #cecdcd;
+}
+
+.footer-contact a {
+  color: rgb(255, 202, 105);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-right p {
+  font-size: 14px;
+  color: #cecdcd;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Bottom Strip */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* --------------------------- */
+/* RESPONSIVENESS */
+/* --------------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .footer-container {
+    padding: 20px 40px;
+  }
+
+  .footer-left,
+  .footer-right {
+    max-width: 100%;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-left .logo-title {
+    justify-content: center;
+  }
+
+  .footer-contact {
+    justify-content: center;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  footer {
+    padding: 30px 15px 15px 15px;
+  }
+
+  .footer-container {
+    padding: 15px;
+  }
+
+  .footer-left h2,
+  .footer-right h2 {
+    font-size: 18px;
+  }
+
+  .footer-left p,
+  .footer-right p,
+  .footer-contact a {
+    font-size: 13px;
+  }
+}

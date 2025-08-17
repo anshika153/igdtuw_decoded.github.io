@@ -1,0 +1,97 @@
+body {
+    background-color: #0d0d0d;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #ffcc00;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ffdb4d;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: cursive;
+    color: antiquewhite;
+}
+
+h2{
+    color:antiquewhite;
+}
+/* Tagline */
+.tagline {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #ffcc66;
+    font-style: italic;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 204, 102, 0.6);
+    border-color: #ffcc66;
+}
+
+/* Card Content */
+.info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #ffcc66;
+}
+
+.info p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+
+/* Links */
+.map-link {
+    text-decoration: none;
+    color: #66ccff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.map-link:hover {
+    color: #ff9966;
+}
