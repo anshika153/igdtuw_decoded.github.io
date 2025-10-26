@@ -20,7 +20,7 @@ Our goal: *make your first year (and beyond) smoother, smarter and more fun.*
 ### 📂 Project Structure
 
 <pre><code>
-    ```plaintext
+    ```
 igdtuw_decoded.github.io/
 │
 ├── index.html                # Homepage – introduction and navigation to all sections
