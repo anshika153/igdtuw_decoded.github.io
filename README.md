@@ -17,7 +17,6 @@ Our goal: *make your first year (and beyond) smoother, smarter and more fun.*
 - CSS3 (with a clean, student-friendly design)  
 - Vanilla JavaScript for simple interactive pages  
 
-## 📁 Project Structure
 ### 📂 Project Structure
 
 ```plaintext
@@ -40,7 +39,7 @@ igdtuw_decoded.github.io/
 ├── assets/                   # Folder containing all visual and static files
 │   ├── images/               # Logos, banners, and illustrations
 │   ├── icons/                # Custom icons used across the site
-│   └── pdfs/                 # Uploaded notes or study PDFs
+└──pdfs/                 # Uploaded notes or study PDFs
 
 ## 🌐 Live Demo
 
