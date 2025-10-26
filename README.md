@@ -19,9 +19,8 @@ Our goal: *make your first year (and beyond) smoother, smarter and more fun.*
 
 ### 📂 Project Structure
 
-### 📂 Project Structure
-
-```plaintext
+<pre><code>
+    ```plaintext
 igdtuw_decoded.github.io/
 │
 ├── index.html                # Homepage – introduction and navigation to all sections
@@ -43,6 +42,7 @@ igdtuw_decoded.github.io/
     ├── icons/                # Custom icons used across the site
     └── pdfs/                 # Uploaded notes or study PDFs
 
+</code></pre>
 
 ## 🌐 Live Demo
 
