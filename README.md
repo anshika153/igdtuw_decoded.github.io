@@ -18,9 +18,7 @@ Our goal: *make your first year (and beyond) smoother, smarter and more fun.*
 - Vanilla JavaScript for simple interactive pages  
 
 ### 📂 Project Structure
-
 <pre><code>
-    ```
 igdtuw_decoded.github.io/
 │
 ├── index.html                # Homepage – introduction and navigation to all sections
@@ -57,7 +55,6 @@ Check out the live site here:
 - Modern, clean UI with bright colours and easy navigation  
 - Designed by students, for students — real-world usable  
 
-
 ## 🤝 Getting Involved
 
 Want to contribute? Whether you have notes, design tweaks, or new page ideas — we’d love your help!
@@ -75,4 +72,3 @@ All resources here are provided for informational and educational use only — w
 
 Thank you for visiting! 🎉  
 Study smart, stay curious, and let’s make this journey awesome together.
-
