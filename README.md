@@ -19,6 +19,8 @@ Our goal: *make your first year (and beyond) smoother, smarter and more fun.*
 
 ### 📂 Project Structure
 
+### 📂 Project Structure
+
 ```plaintext
 igdtuw_decoded.github.io/
 │
@@ -36,10 +38,11 @@ igdtuw_decoded.github.io/
 │
 ├── script.js                 # JS for interactive elements (hover effects, navigation, etc.)
 │
-├── assets/                   # Folder containing all visual and static files
-│   ├── images/               # Logos, banners, and illustrations
-│   ├── icons/                # Custom icons used across the site
-└──pdfs/                 # Uploaded notes or study PDFs
+└── assets/                   # Folder containing all visual and static files
+    ├── images/               # Logos, banners, and illustrations
+    ├── icons/                # Custom icons used across the site
+    └── pdfs/                 # Uploaded notes or study PDFs
+
 
 ## 🌐 Live Demo
 
