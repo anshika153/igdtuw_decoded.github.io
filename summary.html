@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Summarizer</title>
+  <link rel="stylesheet" href="summary.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Text Summarizer</h1>
+    <p class="subtitle">Quickly get clarity from lengthy texts.</p>
+
+    <div class="input-box">
+      <textarea id="textInput" placeholder="paste your text here.."></textarea>
+      <div class="icons">
+        <label for="fileInput" class="icon-btn" title="Attach File">
+          📎
+        </label>
+        <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" hidden>
+        <button class="icon-btn" id="summarizeIcon" title="Summarize">➤</button>
+      </div>
+    </div>
+
+    <div id="attachments"></div>
+
+    <button class="summarize-btn" id="summarizeBtn">Summarize</button>
+  </div>
+
+  <script src="summary.js" defer></script>
+</body>
+</html>
