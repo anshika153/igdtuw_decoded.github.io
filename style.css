@@ -149,6 +149,17 @@ body {
   font-weight: 500;
 }
 
+.summary-button{
+  color:#fff;
+  font-size:1.06rem;
+  text-decoration:none;
+}
+
+.summary-button:hover {
+  background: #dbef007b;
+  color: #FFF;
+}
+
 /* RESPONSIVE DESIGN (MEDIA QUERIES) */
 
 
@@ -927,3 +938,4 @@ footer {
     font-size: 13px;
   }
 }
+
