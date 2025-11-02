@@ -34,7 +34,7 @@ const fileInput = document.getElementById('fileInput');
 const textInput = document.getElementById('textInput');
 
 let uploadedFiles = [];
-const HF_API_TOKEN = "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"; 
+const HF_API_TOKEN = "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"; //hugging face api
 
 // Handle file uploads and show file preview
 fileInput.addEventListener('change', async (e) => {
@@ -196,3 +196,4 @@ async function summarize() {
 // Trigger summarize on both button and icon click
 summarizeBtn.addEventListener('click', summarize);
 summarizeIcon.addEventListener('click', summarize);
+
